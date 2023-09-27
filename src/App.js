@@ -21,12 +21,19 @@ export default function App() {
           ? setError('Nothing found to show.')
           : setUsers(data);
         setLoading(false);
+      })
+      .catch((err) => {
+        setError('Network error.');
+        setLoading(false);
       });
   };
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
     <div>
       <h1>React App to display a list of users!</h1>
-      <button onClick={() => fetchData()}>Fetch some data</button>
+      {/* <button onClick={() => fetchData()}>Fetch some data</button> */}
       <p>{error ?? error}</p>
       {loading ? (
         <Loader />
