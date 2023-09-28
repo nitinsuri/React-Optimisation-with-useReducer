@@ -26,22 +26,29 @@ ul {
   }
 }
 
+h1 {
+  background: linear-gradient(90deg, #ef4444, #f59e0b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 #loader {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   left: 50%;
-  padding: 10px;
   position: absolute;
   top: 50%;
-  transform: translate(-50% -50%);
-  width: 200px;
+  transform: translate(-50%);
+  width: 150px;
 
   span {
     background-color: #ffc400;
     border-radius: 50%;
     height: 20px;
     position: relative;
+    top: 0;
     width: 20px;
 
     /*animation*/
@@ -70,19 +77,10 @@ ul {
 }
 
 @keyframes bounce {
-  0% {
-    top: 0;
-  }
   25% {
     top: 10px;
   }
-  50% {
-    top: 0;
-  }
   75% {
     top: -10px;
-  }
-  100% {
-    top: 0;
   }
 }
