@@ -1,21 +1,31 @@
 * {
   box-sizing: border-box;
+  font-family: 'Albert Sans', serif;
 }
 
 body {
   margin: 0;
   padding: 1rem;
-  font-family: 'Roboto Slab', serif;
   color: black;
   background-color: #cccccc;
 }
+
 button {
-  background-color: transparent;
-  border: 1px solid #581845;
-  border-radius: 4px;
-  font-family: 'Roboto Slab', serif;
-  padding: 0.5rem 1rem;
+  background-color: #9a9a9a;
+  border: 1px solid #777;
+  border-radius: 6px;
+  box-shadow: 2px 2px 6px 2px #ccc;
+  color: rgb(52, 52, 52);
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 1rem;
+  transition: box-shadow 0.5s;
+  &:hover {
+    box-shadow: 2px 2px 4px 2px #999, 2px 2px 4px 4px #8d8d8d inset;
+  }
 }
+
 ul {
   list-style: none;
   margin: 0;
