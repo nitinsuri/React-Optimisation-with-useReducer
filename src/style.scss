@@ -1,6 +1,40 @@
-* {
+*,
+*::before,
+*::after {
+  border: none;
   box-sizing: border-box;
-  font-family: 'Albert Sans', serif;
+  font-family: 'Albert Sans', system-ui, sans-serif;
+}
+:focus:not(:focus-visible) {
+  outline: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ol:not(article ol),
+ul:not(article ul) {
+  list-style: none;
+}
+
+ol,
+ul {
+  padding-left: 0;
+}
+
+article ol,
+article ul {
+  list-style-position: inside;
+}
+label,
+button,
+select,
+summary,
+[type='radio'],
+[type='submit'],
+[type='checkbox'] {
+  cursor: pointer;
 }
 
 body {
@@ -27,9 +61,6 @@ button {
 }
 
 ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   li {
     border-bottom: 1px solid #fff;
     padding: 20px 10px;
